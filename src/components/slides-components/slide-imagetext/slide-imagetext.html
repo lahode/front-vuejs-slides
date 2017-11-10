@@ -1,0 +1,12 @@
+<div class="slide-imagetext col-md-12 mx-auto">
+  <div :class="getClass">
+    <h2 v-if="slidecomp.field_it_title">{{ slidecomp.field_it_title[0] }}</h2>
+    <div class="left">
+      <img v-if="slidecomp.field_it_image" :src="slidecomp.field_it_image[0]" />
+    </div>
+    <div class="right">
+      <div v-if="slidecomp.field_it_body" v-html="slidecomp.field_it_body[0]"></div>
+      <a v-if="slidecomp.field_it_link" :href="slidecomp.field_it_link[0]" target="_blank">{{ slidecomp.field_it_link[0] }}</a>    
+    </div>
+  </div>
+</div>

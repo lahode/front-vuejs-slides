@@ -1,0 +1,21 @@
+<div id="app">
+  <transition-group
+                tag="div"
+                name="slide"
+                :enter-class="slideEnter"
+                :leave-to-class="slideLeave"
+                v-if="slides.length > 0">
+    <app-slides
+                v-for="index in [currentSlide]"
+                :slide="slides[currentSlide]"
+                :index="index"
+                :key=index>
+    </app-slides>
+  </transition-group>
+  <div class="pager previous" @click="previousSlide">
+    <i class="arrow left"></i>
+  </div>
+  <div class="pager next" @click="nextSlide">
+    <i class="arrow right"></i>
+  </div>
+</div>

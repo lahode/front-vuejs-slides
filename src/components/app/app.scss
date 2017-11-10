@@ -1,0 +1,60 @@
+#app {
+  body {
+    overflow: hidden;
+  }
+
+  .slide-leave-active,
+  .slide-enter-active {
+    transition: 1s;
+  }
+  .slide-left {
+    transform: translate(100%, 0);
+  }
+  .slide-right {
+    transform: translate(-100%, 0);
+  }
+
+  .pager {
+    position: absolute;
+    height: 100%;
+    width: 70px;
+    background-color: #666;
+    opacity: 0;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pager:hover {
+    transition: opacity .25s ease-in-out;
+    opacity: 0.8;
+  }
+
+  .before {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 20px;
+    max-width: 50%;
+  }
+
+  .arrow.left {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+  }
+
+  .arrow.right {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+  }
+}

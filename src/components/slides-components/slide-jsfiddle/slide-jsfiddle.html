@@ -1,0 +1,9 @@
+<div class="slide-jsfiddle col-md-10 mx-auto">
+  <div :class="getClass">
+    <h2 v-if="slidecomp.field_jsfiddle_titre">{{ slidecomp.field_jsfiddle_titre[0] }}</h2>
+    <iframe
+      style="width: 100%; height: 300px"
+      :src="getJSFiddleUrl">
+    </iframe>
+  </div>
+</div>

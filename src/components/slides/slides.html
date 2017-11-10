@@ -1,0 +1,12 @@
+<section class="slide" :id="slideID">
+  <div class="container h-100">
+    <div class="row h-100">
+      <h1 v-if="slide && slide.title">{{ slide.title }}</h1>
+      <component v-for="(slideComponent, index) in slideComponents"
+                 :key="index"
+                 :is="slideComponentsName[index]"
+                 :slidecomp="slideComponent"
+                 :numbercomp="countComp"></component>
+    </div>
+  </div>
+</section>

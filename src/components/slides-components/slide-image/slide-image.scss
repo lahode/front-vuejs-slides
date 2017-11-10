@@ -1,0 +1,19 @@
+.slide-image {
+  .full {
+    height: calc(100vh - 125px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .half {
+    height: calc(50vh - 125px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+  }
+}

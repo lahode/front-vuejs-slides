@@ -1,0 +1,27 @@
+.slide-imagetext {
+  .full {
+    height: calc(80vh - 125px);
+  }
+
+  .half {
+    height: calc(50vh - 75px);
+  }
+
+  img {
+    max-width: 100%;
+    height: calc(50vh - 150px);
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    margin-left: 50%;
+    font-size: 30px;
+
+    a {
+      color: blue;
+    }
+  }
+}
