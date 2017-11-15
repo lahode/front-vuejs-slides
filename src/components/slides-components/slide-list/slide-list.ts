@@ -12,6 +12,6 @@ export class SlideListComponent extends Vue {
     @Prop() numbercomp: number;
     
     get getClass() {
-        return this.numbercomp === 1 ? 'full' : (this.numbercomp === 2 ? 'half' : '');
+        return this.numbercomp === 1 ? 'full' : (this.numbercomp === 2 ? 'half' : 'small');
     }
 }

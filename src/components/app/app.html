@@ -1,4 +1,17 @@
 <div id="app">
+  <div id="toolbar">
+    Presentation:
+    <select v-if="presentations.length > 0"
+      v-model="currentPresentation"
+      @change="fetchSlides">
+      <option :value="presentation" v-for="presentation in presentations">{{presentation}}</option>
+    </select>
+      Slide:
+    <select v-if="slides.length > 0"
+      v-model="currentSlide">
+      <option :value="index" v-for="(slide, index) in slides">{{index}}</option>
+    </select>
+  </div>
   <transition-group
                 tag="div"
                 name="slide"

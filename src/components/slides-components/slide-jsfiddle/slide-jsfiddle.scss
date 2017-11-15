@@ -1,5 +1,14 @@
 .slide-jsfiddle {
-  iframe {
-    height: calc(90vh - 125px) !important;
+  .full {
+    iframe {
+      height: calc(88vh - 125px) !important;
+    }
   }
+
+  .half {
+    iframe {
+      height: calc(50vh - 125px) !important;
+    }    
+  }
+
 }

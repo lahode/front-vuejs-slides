@@ -10,24 +10,27 @@ import './app.scss';
     template: require('./app.html'),
     components: {
       appSlides : SlidesComponent
-    }
+    },
 })
 export class AppComponent extends Vue {
     slides: any[] = [];
     slideEnter: string = 'slide-left';
     slideLeave: string = 'slide-right';
     currentSlide: number = 0;
+    presentations: number[] = [1, 13];
+    currentPresentation: number = 1;
     endpoint: any = process.env.ENDPOINT;
 
     // Created lifecyclehook
     created() {
-        console.log(this.endpoint)
+        this.endpoint = this.endpoint;
         this.fetchSlides();
     }
 
     fetchSlides() {
-        axios.get(this.endpoint)
+        axios.get(this.endpoint + this.currentPresentation)
             .then(response => {
+                this.currentSlide = 0;
                 this.slides = response.data;
             });
     }
@@ -48,5 +51,5 @@ export class AppComponent extends Vue {
             this.currentSlide++;
         }
         return null;
-    }    
+    }
 }

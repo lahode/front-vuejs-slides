@@ -32,6 +32,21 @@
     opacity: 0.8;
   }
 
+  #toolbar {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    background-color: #666;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  #toolbar:hover {
+    transition: opacity .25s ease-in-out;
+    opacity: 0.8;
+  }
+
   .before {
     left: 0;
   }
@@ -57,4 +72,5 @@
       transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
   }
+
 }
