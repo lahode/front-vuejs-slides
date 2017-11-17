@@ -1,5 +1,5 @@
-<div class="slide-image col-md-12 mx-auto">
-  <div v-if="slidecomp.field_image_size" :class="slidecomp.field_image_size[0]">
+<div class="slide-image mx-auto" :class="getClass()">
+  <div v-if="slidecomp.field_image_size">
       <img v-if="slidecomp.field_image_image" :src="slidecomp.field_image_image[0]" />
   </div>
 </div>

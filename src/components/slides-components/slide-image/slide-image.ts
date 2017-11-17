@@ -11,8 +11,13 @@ export class SlideImageComponent extends Vue {
     @Prop() slidecomp: any;
     @Prop() numbercomp: number;
 
-    get getClass() {
-        return this.numbercomp === 1 ? 'full' : (this.numbercomp === 2 ? 'half' : '');
-    }
+    getClass() {
+        switch(this.slidecomp.field_image_size[0]) {
+            case 'right':
+                return 'col-md-4';
+            default:
+                return 'col-md-12';
+        }
+     }
 
 }
