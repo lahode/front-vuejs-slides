@@ -13,12 +13,19 @@
   }
 
   .left {
-    float: left;
+    @media screen and (min-width: 800px) {
+      float: left;
+    }  
   }
 
   .right {
-    margin-left: 50%;
+    @media screen and (min-width: 800px) {
+      margin-left: 50%;
+    }
     font-size: 30px;
+    @media screen and (max-width: 640px) {
+      font-size: 5vw;
+    }  
 
     a {
       color: blue;

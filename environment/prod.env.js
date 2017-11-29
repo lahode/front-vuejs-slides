@@ -3,5 +3,5 @@ module.exports = {
   NODE_ENV: '"production"',
   DEBUG_MODE: false,
   API_KEY: '"XXXX-XXXXX-XXXX-XXXX"',
-  ENDPOINT: '""'
+  ENDPOINT: '"http://slides.fl-project.net/slides/"'
 }

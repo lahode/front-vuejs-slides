@@ -1,3 +1,4 @@
+
 {
   "compilerOptions": {
     "lib": [
@@ -6,7 +7,6 @@
       "es2015",
       "es2015.promise"
     ],
-    "strict": true,
     "module": "esnext",
     "moduleResolution": "node",
     "target": "es5",

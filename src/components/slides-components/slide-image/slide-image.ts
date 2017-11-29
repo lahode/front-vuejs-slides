@@ -12,7 +12,7 @@ export class SlideImageComponent extends Vue {
     @Prop() numbercomp: number;
 
     getClass() {
-        switch(this.slidecomp.field_image_size[0]) {
+        switch (this.slidecomp.field_image_size[0]) {
             case 'right':
                 return 'col-md-4';
             default:
