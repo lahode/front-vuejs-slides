@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import { Prop } from 'vue-property-decorator';
+import { Prop, Watch } from 'vue-property-decorator';
 
 import { SlideImageComponent } from '../slides-components/slide-image';
 import { SlideImageTextComponent } from '../slides-components/slide-imagetext';
@@ -36,6 +36,20 @@ export class SlidesComponent extends Vue {
 
     get countComp() {
         return this.slideComponents.length;
+    }
+
+    @Watch('slide')
+    onPresentationChanged(val: string, oldVal: string) {
+        this.slideComponents = [];
+        this.slideComponentsName = [];
+        if (this.slide && this.slide.hasOwnProperty('components')) {
+            this.slide.components.map((component: any) => {
+                let componentType = Object.keys(component)[0];
+                let componentName = 'appSlide' + this.capitalize(componentType);
+                this.slideComponents.push(component[componentType]);
+                this.slideComponentsName.push(componentName);
+            });
+        }
     }
 
     mounted() {

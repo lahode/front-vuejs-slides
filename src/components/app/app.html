@@ -1,17 +1,18 @@
 <div id="app">
   <div id="toolbar">
     Presentation:
-    <select v-if="presentations.length > 0"
+    <select v-if="presentations.length > 0 && currentPresentation"
       v-model="currentPresentation"
-      @change="fetchSlides">
-      <option :value="presentation" v-for="presentation in presentations">{{presentation}}</option>
+      @change="changeSlideshow">
+      <option :value="presentation.id" v-for="presentation in presentations">{{ presentation.title }}</option>
     </select>
       Slide:
     <select v-if="slides.length > 0"
       v-model="currentSlide">
-      <option :value="index" v-for="(slide, index) in slides">{{index}}</option>
+      <option :value="index" v-for="(slide, index) in slides">{{ index }}</option>
     </select>
   </div>
+  <app-home-slide :slide="homeSlide" @hideme="hideHomeSlide" v-show="showHomeSlide"></app-home-slide>
   <transition-group
                 tag="div"
                 name="slide"
